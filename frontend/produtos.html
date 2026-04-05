@@ -5,24 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
     <link rel="stylesheet" href="/css/produtos.css">
+    <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header class="header">
             <nav class="navegacao">
                 <span><img src="assets/img/icon.png" alt="iconcafe"></span>
-                <a href="#">Início</a></li>
+                <a href="index.html">Início</a></li>
                 <a href="#">Benefícios</a>
-                <a href="#">O Café</a>
+                <a href="produtos.html">Nossos Cafés</a>
                 <a href="#">Contato</a>
                 <a href="#">Comprar Agora</a>
             </nav>
     </header>
     <main>
-        <section class="produtos">
+        <section class="produtos" id="produtos">
             <h1>Nossos Cafés</h1>
             <ul class="cafes">
                 <li>
-                    <a href="#">
+                    <a href="#" onclick="adicionarAoCarrinho()" id="cafe" data-nome="Café Expresso" class="btn-comprar"> 
                         <img src="assets/img/cafes/Café expresso.jpeg" alt="Café Expresso">
                     </a>
                     <h2>Café Expresso</h2>
@@ -94,5 +95,7 @@
             </ul>
         </section>
     </main>
+
+    <script src="js/carrinho.js"></script>
 </body>
 </html>

@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
@@ -25,9 +29,6 @@ header {
     flex-wrap: wrap; 
     gap: 15px;
 
-    position: sticky;
-    top: 0; /* Gruda no topo da tela */
-    z-index: 1000;
 }
 
 header img {
@@ -44,6 +45,10 @@ header img {
     text-align: center;
     align-items: center;
     gap: 40px;
+
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 
 }
 
@@ -100,6 +105,11 @@ header img {
     border-radius: 10px;
     margin: 0 auto;
     flex-wrap: wrap;
+
+
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .cafes {
