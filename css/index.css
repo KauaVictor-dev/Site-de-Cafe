@@ -1,0 +1,365 @@
+@import url('colors.css');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    --cafe-dark: #2c1e1a;
+    --cafe-medium: #4e342e;
+    --cafe-gold: #d4a373;
+    --white: #ffffff;
+    --gray-light: #f4f1ea;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+h1, h2, h3 {
+    font-family: "Playfair Display", serif ;
+}
+
+
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    gap: 15px;
+
+    position: sticky;
+    top: 0; /* Gruda no topo da tela */
+    z-index: 1000;
+    
+}
+
+.navegacao img {
+  height: 50px;
+}
+
+.navegacao {
+    background-color: #26231C;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    flex-wrap: wrap; 
+}
+
+.navegacao a {
+    text-decoration: none;
+    color: #B0A89F;
+    transition: opacity 0.3s ease;
+    font-family: "Lato", sans-serif;
+}
+
+.navegacao a:hover {
+    opacity: 0.7;
+}
+
+
+@media (max-width: 768px) {
+    .navegacao {
+        gap: 20px; 
+        padding: 10px 15px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column; 
+        justify-content: center;
+        padding: 15px 10px;
+    }
+
+    .navegacao {
+        width: 100%;
+        box-sizing: border-box; 
+        gap: 15px; 
+    }
+}
+
+.inicio-content {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/img/cafe.jpeg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    font-family: "Playfair Display", serif;
+    gap: 20px;
+
+    min-height: 100vh;
+}
+
+
+.botoes {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
+.botoes a {
+    font-family: "Lato", sans-serif;
+    text-decoration: none;
+    color: #B0A89F;
+}
+
+.botoes a:hover {
+    opacity: 0.7;
+}
+
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 5%;
+    flex-wrap: wrap; 
+}
+
+
+.card {
+    width: 200px;
+    height: 300px; 
+    border-radius: 15px;
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    align-items: flex-end; 
+    padding: 25px;
+    
+    transition: transform 0.3s ease;
+    position: relative; 
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+
+.card1 { background-image: url(../assets/img/cofferoast.jpeg); }
+.card2 { background-image: url(../assets/img/flavour.jpeg); }
+.card3 { background-image: url(../assets/img/hands.jpeg); }
+
+
+.card h2 {
+    color: #FDF8F5;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    z-index: 2; 
+}
+
+.beneficios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #1A1814;
+    
+}
+
+
+.bloco {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.bloco a {
+    text-decoration: none;
+    color: #D4A373;
+    font-family: "Lato", sans-serif;
+}
+
+.bloco a:hover {
+    opacity:  0.7;
+}
+
+.clientes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 50px 5%;
+    gap: 50px;
+}
+
+.cliente1 {
+    background-color: #0e0c0a;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.site-footer {
+  background-color: #11100d;
+  color: var(--white);
+  padding: 60px 20px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container Principal */
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; /* Garante que quebre linha no mobile */
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Colunas Individuais */
+.footer-col {
+  flex: 1;
+  min-width: 250px; /* Evita que as colunas fiquem muito estreitas */
+}
+
+/* Estilização da Marca */
+.footer-logo {
+  color: var(--cafe-gold);
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.brand-col p {
+  line-height: 1.6;
+  opacity: 0.9;
+  max-width: 300px;
+}
+
+/* Links Sociais */
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  background: var(--cafe-medium);
+  color: var(--white);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: var(--cafe-gold);
+  transform: translateY(-3px);
+}
+
+/* Menus e Listas */
+.footer-col h3 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: var(--cafe-gold);
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col a {
+  color: var(--white);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.footer-col a:hover {
+  opacity: 1;
+  padding-left: 5px;
+  color: var(--cafe-gold);
+}
+
+/* Rodapé Inferior (Copyright) */
+.footer-bottom {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.legal-links a {
+  margin-left: 20px;
+  color: var(--white);
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.legal-links a:hover {
+  opacity: 1;
+}
+
+/* Ajustes para Telas Pequenas */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .brand-col p {
+    margin: 0 auto;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .legal-links a {
+    margin: 0 10px;
+  }
+}
+
+
+
+
+
+

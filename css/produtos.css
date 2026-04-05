@@ -1,0 +1,129 @@
+@import url('colors.css');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+h1, h2, h3 {
+    font-family: "Playfair Display", serif ;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    gap: 15px;
+
+    position: sticky;
+    top: 0; /* Gruda no topo da tela */
+    z-index: 1000;
+}
+
+header img {
+    height: 50px;
+}
+
+.navegacao {
+    display: flex;
+    background-color: var(--cor-terciaria);
+    padding: 10px 20px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 40px;
+
+}
+
+.navegacao a {
+    color: var(--cor-texto2);
+    text-decoration: none;  
+    transition: opacity 0.3s ease;
+    font-family: "Lato", sans-serif;
+}
+
+.navegacao a:hover {
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .navegacao {
+        gap: 20px; 
+        padding: 10px 15px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column; 
+        justify-content: center;
+        padding: 15px 10px;
+    }
+
+    .navegacao {
+        width: 100%;
+        box-sizing: border-box; 
+        gap: 15px; 
+    }
+}
+
+.produtos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 80px;
+    gap: 30px;
+}
+
+.produtos {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--cor-terciaria);
+    padding: 10px 40px;
+    border-radius: 10px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.cafes {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 20px;
+    justify-content: center;
+    color: var(--cor-texto);
+}
+
+.cafes img  {
+    height: 100px;
+    border-radius: 8px;
+}
+
+.cafes li a:hover img {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+
+.cafes h2{
+    text-align: justify;
+    font-size: 1.2em;
+    margin-left: 8px;
+}
