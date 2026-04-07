@@ -66,13 +66,13 @@ h1, h2, h3 {
 .navegacao a {
     text-decoration: none;
     color: #B0A89F;
-    transition: opacity 0.3s ease;
+    transition: transform 0.3s ease;
     font-family: "Lato", sans-serif;
 
 }
 
 .navegacao a:hover {
-    opacity: 0.7;
+    transform: translateY(-2px);
 }
 
 
@@ -251,9 +251,13 @@ h1, h2, h3 {
 }
 
 .site-footer {
-  background-color: #11100d;
-  color: var(--white);
-  padding: 60px 20px 20px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #1e1c15 40%
+  );
+  color: #ffffff;
+  padding: 30px 20px 10px; /* diminuído */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -262,42 +266,43 @@ h1, h2, h3 {
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap; /* Garante que quebre linha no mobile */
+  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 40px;
+  gap: 20px; /* menor */
 }
 
 /* Colunas Individuais */
 .footer-col {
   flex: 1;
-  min-width: 250px; /* Evita que as colunas fiquem muito estreitas */
+  min-width: 200px; /* menor */
 }
 
-/* Estilização da Marca */
+/* Marca */
 .footer-logo {
-  color: var(--cafe-gold);
-  font-size: 1.8rem;
-  margin-bottom: 15px;
+  color: #c8a46b;
+  font-size: 1.4rem; /* menor */
+  margin-bottom: 10px;
 }
 
 .brand-col p {
-  line-height: 1.6;
+  line-height: 1.4;
   opacity: 0.9;
-  max-width: 300px;
+  max-width: 260px;
+  font-size: 0.9rem;
 }
 
-/* Links Sociais */
+/* Redes sociais */
 .social-links {
   display: flex;
-  gap: 15px;
-  margin-top: 20px;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .social-links a {
-  background: var(--cafe-medium);
-  color: var(--white);
-  width: 40px;
-  height: 40px;
+  background: #4b3621;
+  color: #ffffff;
+  width: 35px; /* menor */
+  height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -307,15 +312,15 @@ h1, h2, h3 {
 }
 
 .social-links a:hover {
-  background: var(--cafe-gold);
-  transform: translateY(-3px);
+  background: #c8a46b;
+  transform: translateY(-2px);
 }
 
-/* Menus e Listas */
+/* Menus */
 .footer-col h3 {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  color: var(--cafe-gold);
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #c8a46b;
 }
 
 .footer-col ul {
@@ -324,38 +329,39 @@ h1, h2, h3 {
 }
 
 .footer-col ul li {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .footer-col a {
-  color: var(--white);
+  color: #ffffff;
   text-decoration: none;
   opacity: 0.8;
+  font-size: 0.9rem;
   transition: 0.3s;
 }
 
 .footer-col a:hover {
   opacity: 1;
-  padding-left: 5px;
-  color: var(--cafe-gold);
+  padding-left: 4px;
+  color: #c8a46b;
 }
 
-/* Rodapé Inferior (Copyright) */
+/* Parte inferior */
 .footer-bottom {
   max-width: 1100px;
-  margin: 40px auto 0;
-  padding-top: 20px;
+  margin: 20px auto 0; /* menor */
+  padding-top: 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .legal-links a {
-  margin-left: 20px;
-  color: var(--white);
+  margin-left: 10px;
+  color: #ffffff;
   text-decoration: none;
   opacity: 0.6;
 }
@@ -364,7 +370,7 @@ h1, h2, h3 {
   opacity: 1;
 }
 
-/* Ajustes para Telas Pequenas */
+/* Responsivo */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
@@ -381,12 +387,12 @@ h1, h2, h3 {
 
   .footer-bottom {
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
     text-align: center;
   }
 
   .legal-links a {
-    margin: 0 10px;
+    margin: 0 5px;
   }
 }
 
